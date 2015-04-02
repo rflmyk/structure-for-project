@@ -1,5 +1,5 @@
-# Structure default for project
-Structure default for the projects that I work:
+# Default structure for project
+Default structure for the projects that I work:
 
 ###FOLDERS
 ``` 
