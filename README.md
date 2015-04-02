@@ -1,7 +1,7 @@
 # Structure default for project
 Structure default for the projects that I work:
 
-###Structure of folders
+###FOLDERS
 ``` 
 ├ name-project
     ├─ assets
