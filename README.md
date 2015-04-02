@@ -7,7 +7,6 @@ Structure default for the projects that I work:
     ├─ assets
         ├─ css
             -- app.css
-            -- app.min.css
             ├─ sass
                 ├─ base
                 ├─ FRAMEWORK
