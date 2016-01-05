@@ -3,50 +3,34 @@ Default structure for the projects that I work:
 
 ###FOLDERS
 ``` 
-├ name-project
-    ├─ assets
-        ├─ css
-            -- app.css
-            ├─ sass
-                ├─ base
-                ├─ FRAMEWORK
-                ├─ generic
-                ├─ objects
-                ├─ partials                 
-        ├─ fonts
-            -- *.eot            
-            -- *.svg            
-            -- *.ttf            
-            -- *.wof            
-        ├─ js
-            -- app.js            
-            ├─ plugins
-                -- *.js        
-            ├─ project
-                -- _*.js         
-            ├─ requireds
-                -- *.js
-        ├─ images
-            -- sprite.svg
-            -- sprite.png
-        ├─ svgs
-            -- *.svg 
+├── NAME-PROJECT
+    ├── index.html
+    ├── Gruntfile.js
+    ├── package.json
+    ├── assets
+    │   ├── fonts
+    │   ├── images
+    │   ├── javascripts
+    │   └── stylesheets
+    └── tasks
+        ├── concat.js
+        ├── jshint.js
+        ├── sass.js
+        ├── sprites.js
+        ├── uglify.js
+        ├── usemin.js
+        └── watch.js
 *.html
 ```
 
-####CSS
+####IMAGES
 ``` 
 ├ name-project
-    ├─ assets
-        ├─ css
-            -- app.css
-            -- app.min.css
-            ├─ sass
-                ├─ base
-                ├─ FRAMEWORK
-                ├─ generic
-                ├─ objects
-                ├─ partials              
+│   ├─ assets
+│   ├── images
+│   │   ├── jpgs
+│   │   ├── pngs
+│   │   └── svgs           
             ...           
 ...
 ``` 
@@ -54,14 +38,29 @@ Default structure for the projects that I work:
 ####JAVASCRIPT
 ``` 
 ├ name-project
-    ├─ assets
-        ├─ js
-            -- app.js            
-            ├─ plugins
-                -- *.js        
-            ├─ project
-                -- _*.js         
-            ├─ requireds
-                -- *.js
+│   ├─ assets
+│   ├── javascripts
+│   │   ├── compiled
+│   │   │   └── app.js
+│   │   ├── project
+│   │   └── vendor
 ...
 ```
+
+####STYLESHEETS
+``` 
+├ name-project
+│   ├─ assets
+│   └── stylesheets
+│       ├── compiled
+│       │   └── app.css
+│       └── sass
+│           ├── app.scss
+│           ├── base
+│           ├── generic
+│           ├── objects
+│           ├── partials
+│           └── vendor            
+            ...           
+...
+``` 

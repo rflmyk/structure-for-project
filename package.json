@@ -1,18 +1,32 @@
 {
   "name": "",
-  "version": "0.0.1",
-  "title": "",
-  "homepage": "",
-  "devDependencies": {
-    "grunt-contrib-sass": "~0.6.0",
-    "grunt-contrib-jshint": "^0.11.0",    
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt-contrib-uglify": "~0.2.7",
-    "grunt-contrib-concat": "~0.3.0",
-    "grunt-dr-svg-sprites": "~0.9.9",
-    "grunt-stripmq": "0.0.6"
+  "version": "",
+  "description": "",
+  "author": "",
+  "contributors": [
+    {
+      "name": "",
+      "email": ""
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
   },
-  "dependencies": {
-    "grunt-dr-svg-sprites": "~0.9.9"
+  "private": true,
+  "scripts": {
+    "start": "grunt",
+    "deploy": "grunt deploy"
+  }
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-concat": "^0.4.0",
+    "grunt-contrib-jshint": "^0.11.3",
+    "grunt-contrib-sass": "^0.7.3",
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-dr-svg-sprites": "^0.9.15",
+    "grunt-usemin": "^3.1.1",
+    "load-grunt-tasks": "^3.3.0"
   }
 }
