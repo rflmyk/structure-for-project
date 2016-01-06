@@ -5,7 +5,7 @@ module.exports = function( grunt ) {
 				style: 'nested'
 			},
 			files: {
-				'/assets/stylesheets/compiled/app.css': '/assets/stylesheets/sass/app.scss'
+				'./assets/stylesheets/compiled/app.css': './assets/stylesheets/sass/app.scss'
 			}
 		},
 		dist: {
@@ -13,7 +13,7 @@ module.exports = function( grunt ) {
 				style: 'compressed'
 			},
 			files: {
-				'/assets/stylesheets/compiled/app.min.css': '/assets/stylesheets/compiled/app.css'
+				'./assets/stylesheets/compiled/app.min.css': './assets/stylesheets/compiled/app.css'
 			}
 		}
 	} );

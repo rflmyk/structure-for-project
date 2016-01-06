@@ -64,3 +64,15 @@ Default structure for the projects that I work:
             ...           
 ...
 ``` 
+
+####VIEWS
+``` 
+├ name-project
+│   ├─ assets
+│   └── views
+│       ├── base
+│       ├── generics
+│       └── partials          
+            ...           
+...
+``` 

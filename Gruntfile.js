@@ -8,6 +8,6 @@ module.exports = function( grunt ) {
 
 	grunt.loadTasks( './tasks' );
 
-	grunt.registerTask( "default", [ 'watch' ] );
+	grunt.registerTask( "default", [ 'jade','connect:server','watch' ] );
 	grunt.registerTask( "deploy", [ 'usemin', 'sass:dist' ] );
 };
