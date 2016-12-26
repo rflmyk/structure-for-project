@@ -1,0 +1,29 @@
+{{#shapes}}
+{{#selector.shape}}{{expression}}{{/selector.shape}}{{^last}}
+{{/last}} {
+  background-position: {{position.relative.xy}};
+  width: {{width.outer}}px; 
+  height: {{height.outer}}px;
+}
+@mixin {{#selector.shape}}sprite-{{base}}{{/selector.shape}}(){
+  background-position: {{position.relative.xy}};
+  width: {{width.outer}}px; 
+  height: {{height.outer}}px;  
+}
+
+{{/shapes}}
+//Please using modernizr to append class .no-svg in tag <BODY>
+{{#shapes}}
+{{#selector.shape}}{{expression}}{{/selector.shape}}{{^last}},
+{{/last}}{{/shapes}} {
+  background-image: url("../{{{sprite}}}") ;
+  background-repeat: no-repeat;
+}
+
+//Fallback for old browser
+{{#shapes}}
+.no-svg {{#selector.shape}}{{expression}}{{/selector.shape}}{{^last}},
+{{/last}}{{/shapes}} {
+  background-image: url('../{{#sprite}}{{#png}}{{{sprite}}}{{/png}}{{/sprite}}');
+  background-repeat: no-repeat;  
+}

@@ -1,0 +1,80 @@
+var SVGSpriter = require( 'svg-sprite' ),
+	path = require( 'path' ),
+	mkdirp = require( 'mkdirp' ),
+	fs = require( 'fs' ),
+	glob = require( 'glob' ),
+	cwd = path.join( __dirname ),
+	dest = path.normalize( path.join( __dirname, '../' ) ),
+	files = glob.glob.sync( '../assets/images/svgs/*.svg', { cwd: cwd } ),
+	exec = require('child_process').exec;
+
+var spriter = new SVGSpriter( {
+	dest: dest,
+	log: 'info',
+	shape: {
+		id: {
+			generator: function( name ) {
+				return path.basename( name, '.svg' );
+			}
+		},
+		transform: [ 'svgo' ],
+	}
+
+} );
+
+function addFixtureFiles( spriter, files ) {
+	files.forEach( function( file ) {
+		spriter.add(
+			path.resolve( path.join( cwd, file ) ),
+			file,
+			fs.readFileSync( path.join( cwd, file ), { encoding: 'utf-8' } )
+		);
+	} )
+	return spriter;
+}
+
+addFixtureFiles( spriter, files ).compile( {
+	css: {
+		"dest": ".",
+		"prefix": ".sprite-",
+		"render": {
+			"scss": {
+				"dest": "./sass/abstracts/_sprite.scss",
+				"template": "./tmpl/template.scss"
+			}
+		},
+		variables: {
+			png: function() {
+				return function( spriter, render ) {
+					return render( spriter ).split( '.svg' ).join( '.png' );
+				}
+			}
+		},
+		"sprite": "assets/images/sprite-auto-generate.svg",
+		"bust": false,
+		"example": {
+			"dest": "click-for-view-icons.html"
+		}
+	},
+}, function( error, result, cssData ) {
+	for ( var type in result.css ) {
+		mkdirp.sync( path.dirname( result.css[ type ].path ) );
+
+		if( result.css[ type ].path.split('.')[1] === 'svg' ){
+			var svg = result.css[ type ].path,
+				png = svg.split('.svg')[0] + '.png';
+			
+			if(fs.existsSync(png)){ fs.unlink(png); }
+			
+			exec('svg2png "'+svg+'" --output="'+png+'"',
+			  (error) => {
+			    if (error !== null) {
+			      console.log(`exec error: ${error}`);
+			    }
+			    console.log(`Your SVG and clone PNG file was create!`);
+			});			
+		}
+		
+		fs.writeFileSync( result.css[ type ].path, result.css[ type ].contents );
+	}
+} );

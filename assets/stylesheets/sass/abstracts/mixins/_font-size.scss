@@ -1,0 +1,9 @@
+@mixin fsize($i, $line-height:true) {
+  font-size: ($i)+px; 
+  font-size: ($i/10)+rem; 
+
+  @if $line-height == true{
+    line-height: ($i+5)+px; 
+    line-height: (($i+5)/10)+rem;
+  }
+}

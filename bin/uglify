@@ -1,0 +1,1 @@
+uglifyjs ./assets/javascripts/requireds/*.js ./assets/javascripts/vendors/*.js ./assets/javascripts/es6_compileds/*.js --lint=./assets/javascripts/es6_compileds/*.js -b -o=./assets/javascripts/app.min.js --source-map ./assets/javascripts/app.min.js.map --source-map-url http://localhost:9090/assets/javascripts/app.min.js.map

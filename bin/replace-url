@@ -1,0 +1,13 @@
+var replace = require("replace");
+var opts = {
+  regex: "",
+  replacement: "",
+  paths: ['css/app.css'],
+  recursive: true,
+  silent: true,
+};
+if(opts.replacement === '' || opts.regex === ''){
+	console.log('Please, report the options requireds, REPLACEMENT and REGEX');
+	return false;
+}
+replace( opts );

@@ -1,1 +1,12 @@
-@import "vendors/bootstrap/bootstrap";
+// ==========================================================================
+//
+// STRUCTURE BASE PROJECT
+// based: https://sass-guidelin.es/#architecture
+//
+// ==========================================================================
+
+@import 'abstracts/variables';
+
+@import 'vendors/bootstrap';
+
+@import 'abstracts/mixins/all';  

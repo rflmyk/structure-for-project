@@ -1,0 +1,1 @@
+uglifyjs ./assets/javascripts/requireds/*.js ./assets/javascripts/vendors/*.js ./assets/javascripts/es6_compileds/*.js --lint=./assets/javascripts/es6_compileds/*.js -o=./assets/javascripts/app.min.js

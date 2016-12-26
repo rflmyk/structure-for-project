@@ -1,0 +1,1 @@
+babel --plugins transform-remove-strict-mode --presets es2015 ./assets/javascripts/es6 -d ./assets/javascripts/es6_compileds

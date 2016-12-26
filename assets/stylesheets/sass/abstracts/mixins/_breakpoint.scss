@@ -1,0 +1,49 @@
+/**
+ * Media query mixin.
+*/
+@mixin breakpoint($point) {
+  //LG BREAKPOINT
+  @if $point == lg {
+    @media (min-width: 1200px) { @content; }
+  }
+  @else if $point == from-lg {
+    @media (min-width: 1200px) { @content; }
+  }
+  @else if $point == up-to-lg {
+    @media (max-width: 1200px) { @content; }
+  }
+  //MD BREAKPOINT
+  @else if $point == md {
+    @media (min-width:992px) and (max-width: 1199px) { @content; }
+  }
+  @else if $point == from-md {
+    @media (min-width:992px) { @content; }
+  }
+  @else if $point == up-to-md {
+    @media (max-width: 1199px) { @content; }
+  }
+  //SM BREAKPOINT
+  @else if $point == sm {
+    @media (min-width: 768px) and (max-width: 991px) { @content; }
+  }
+  @else if $point == from-sm{
+    @media (min-width: 768px) { @content; }
+  }
+  @else if $point == up-to-sm{
+    @media (max-width: 991px) { @content; }
+  }
+  //XS BREAKPOINT
+  @else if $point == xs {
+    @media (min-width: 481px) and (max-width: 767px)  { @content; }
+  }
+  @else if $point == from-xs {
+    @media (min-width: 481px) { @content; }
+  }
+  @else if $point == up-to-xs {
+    @media (max-width: 767px) { @content; }
+  }
+  //SXS BREAKPOINT
+  @else if $point == sxs {
+    @media (max-width: 480px)  { @content; }
+  }
+}
