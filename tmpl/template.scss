@@ -1,6 +1,5 @@
 {{#shapes}}
-{{#selector.shape}}{{expression}}{{/selector.shape}}{{^last}}
-{{/last}} {
+{{#selector.shape}}{{expression}}{{/selector.shape}}{{^last}}{{/last}} {
   background-position: {{position.relative.xy}};
   width: {{width.outer}}px; 
   height: {{height.outer}}px;
@@ -19,7 +18,7 @@
   background-image: url("../{{{sprite}}}") ;
   background-repeat: no-repeat;
 }
-
+//{{{sprite}}}
 //Fallback for old browser
 {{#shapes}}
 .no-svg {{#selector.shape}}{{expression}}{{/selector.shape}}{{^last}},

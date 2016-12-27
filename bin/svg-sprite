@@ -39,7 +39,7 @@ addFixtureFiles( spriter, files ).compile( {
 		"prefix": ".sprite-",
 		"render": {
 			"scss": {
-				"dest": "./sass/abstracts/_sprite.scss",
+				"dest": "./assets/stylesheets/sass/abstracts/_sprite.scss",
 				"template": "./tmpl/template.scss"
 			}
 		},
@@ -50,7 +50,7 @@ addFixtureFiles( spriter, files ).compile( {
 				}
 			}
 		},
-		"sprite": "assets/images/sprite-auto-generate.svg",
+		"sprite": "images/sprite-auto-generate.svg",
 		"bust": false,
 		"example": {
 			"dest": "click-for-view-icons.html"
