@@ -15,7 +15,7 @@
 {{#shapes}}
 {{#selector.shape}}{{expression}}{{/selector.shape}}{{^last}},
 {{/last}}{{/shapes}} {
-  background-image: url("../{{{sprite}}}") ;
+  background-image: url("/{{{sprite}}}") ;
   background-repeat: no-repeat;
 }
 //{{{sprite}}}
@@ -23,6 +23,6 @@
 {{#shapes}}
 .no-svg {{#selector.shape}}{{expression}}{{/selector.shape}}{{^last}},
 {{/last}}{{/shapes}} {
-  background-image: url('../{{#sprite}}{{#png}}{{{sprite}}}{{/png}}{{/sprite}}');
+  background-image: url('/{{#sprite}}{{#png}}{{{sprite}}}{{/png}}{{/sprite}}');
   background-repeat: no-repeat;  
 }
